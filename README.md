@@ -11,24 +11,24 @@ convenient manner.
 
 To save the drudgery of this:
 
-`
-  $("#myDiv").append(
-    $("<div/>").append(
-      $("<span/>").append(
-        $("<b/>").html("A bold statement!"))));
-`
+
+      $("#myDiv").append(
+        $("<div/>").append(
+          $("<span/>").append(
+            $("<b/>").html("A bold statement!"))));
+
 
 This plugin allows you do do this:
 
-`
-   $('#myDiv').$div().$span().$b("A bold statement!");
-`
+
+     $('#myDiv').$div().$span().$b("A bold statement!");
+
 
 
 Usage
 -----
 
-> $('selector').$<element-type>(["content",] [{<attr1>: <val1>, ...}]);
+     $('selector').$<element-type>(["content",] [{<attr1>: <val1>, ...}]);
 
 
 Examples
@@ -36,23 +36,23 @@ Examples
 
 To create a table in the div#myDiv element:
 
-> $('#myDiv').$table();
+     $('#myDiv').$table();
 
 To create a span with the text "hello world" and the class "bold":
 
-> $('#myDiv').$span("hello world", {class: "bold"});
+     $('#myDiv').$span("hello world", {class: "bold"});
 
 To create a table and then add some rows:
 
-> var t = $('#myDiv').$table();
-> var t.$tr().$th("Index").parent().$th("Text");
-> for (var i = 0; i < 10; i++) {
->   t.$tr().$td(i).parent().$td("The number " + i);
-> }
+     var t = $('#myDiv').$table();
+     var t.$tr().$th("Index").parent().$th("Text");
+     for (var i = 0; i < 10; i++) {
+       t.$tr().$td(i).parent().$td("The number " + i);
+     }
 
 You can skip the content if it isn't needed:
 
-> $('#myDiv').$span({class: "bold"});
+     $('#myDiv').$span({class: "bold"});
 
 
 Be aware
