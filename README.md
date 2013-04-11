@@ -11,16 +11,18 @@ convenient manner.
 
 To save the drudgery of this:
 
->
->  $('#myDiv').append(
->    $("<div/>").append(
->      $("<span/>").append(
->        $("<b/>").html("A bold statement!"))));
->
+`
+  $("#myDiv").append(
+    $("<div/>").append(
+      $("<span/>").append(
+        $("<b/>").html("A bold statement!"))));
+`
 
 This plugin allows you do do this:
 
->  $('#myDiv').$div().$span().$b("A bold statement!");
+`
+   $('#myDiv').$div().$span().$b("A bold statement!");
+`
 
 
 Usage
