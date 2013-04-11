@@ -1,0 +1,33 @@
+{
+  "name": "createHtml",
+  "title": "jQuery createHtml",
+  "description": "jQuery plugin to make it easier to create on-the-fly HTML elements and insert them into the DOM.",
+  "keywords": [
+    "HTML",
+    "DOM",
+    "element-insertion"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Edward Funnekotter"
+  },
+  "maintainers": [
+    {
+      "name": "Edward Funnekotter",
+      "email": "efunneko@gmail.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "bugs": "https://github.com/efunneko/jquery.createHtml/issues",
+  "homepage": "https://github.com/efunneko/jquery.createHtml",
+  "docs": "https://github.com/efunneko/jquery.createHtml",
+  "download": "",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}
