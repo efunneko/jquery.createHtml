@@ -7,16 +7,19 @@
         $('body').$style(".good { background-color: #88ff88 } .failed {background-color: #ff8888 }");
 
         // Add some HTML with a variety of tags
-        $('#test').$div({id: 'myDiv'}).$span("<b>Hi  there!</b>", {id:'mySpan'});
+        $('#test').$div({id: 'myDiv'}).$span("<b>Hi there!</b>", {id:'mySpan'});
 
         // Append more to the same element
         $('#test').$div("Some content this time", {id: 'myDiv2'});
 
+        // Add the parent functions
+        $.createHtml("configure", {installParentFunctions: true});
+
         // Now save a created element to variable, add to it and intersperse some parent calls
         var t = $('#test').$table();
-        t.$tr().$th("Index").parent().$th("Text");
+        t.$tr().$th_("Index").$th("Text");
         var i = 1;
-        t.$tr().$td(i).parent().$td("The number " + i);
+        t.$tr().$td_(i).$td("The number " + i);
 
         // Finally validate it all
         if (verify()) {

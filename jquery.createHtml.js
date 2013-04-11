@@ -36,7 +36,36 @@
             "style", "sub", "summary", "sup", "svg", "table", "tbody", "td", "textarea",
             "tfoot", "th", "thead", "time", "title", "tr", "track", "u", "ul", "var",
             "video", "wbr"
-        ];
+        ],
+        methods = {
+            configure: function(options) {
+                if (options.installParentFunctions) {
+                    // Add $<element>_ functions that will return the parent object 
+                    // rather than itself
+                    $.each(elements, function(i, elName) {
+                        $.fn["$" + elName + "_"] = function(content, attrs) {
+                            if (typeof(content) == 'object' && typeof(attrs) == 'undefined') {
+                                attrs = content;
+                                content = undefined;
+                            }
+                            var el = $("<" + elName + ">", attrs);
+                            if (content && content != "") {
+                                el.html(content);
+                            }
+                            var parent = $(this);
+                            parent.append(el);
+                            return parent;
+                        }
+                    });
+                }
+            }
+        };
+
+    $[pluginName] = function(method, options) {
+        if (methods[method]) {
+            methods[method](options);
+        }
+    };
 
     // Add all element functions
     $.each(elements, function(i, elName) {
