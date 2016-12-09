@@ -75,7 +75,7 @@
                 content = undefined;
             }
             var el = $("<" + elName + ">", attrs);
-            if (content && content != "") {
+            if (typeof(content) !== "undefined" && content !== "") {
                 el.html(content);
             }
             $(this).append(el);
