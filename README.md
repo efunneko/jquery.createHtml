@@ -54,7 +54,7 @@ To create a table in the div#myDiv element:
 
 To create a span with the text "hello world" and the class "bold":
 
-     $('#myDiv').$span("hello world", {class: "bold"});
+     $('#myDiv').$span("hello world", {"class": "bold"});
 
 To create a table and then add some rows:
 
@@ -66,7 +66,7 @@ To create a table and then add some rows:
 
 You can skip the content if it isn't needed:
 
-     $('#myDiv').$span({class: "bold"});
+     $('#myDiv').$span({"class": "bold"});
 
 
 Be aware
