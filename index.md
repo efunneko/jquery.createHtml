@@ -20,20 +20,26 @@ $("#myDiv").append(
 This plugin allows you do do this:
 
 
-`$('#myDiv').$div().$span().$b("A bold statement!");`
+```js
+$('#myDiv').$div().$span().$b("A bold statement!");
+```
 
 
 To further simplify content creation (and further pollute the jQuery namespace) it
 is possible to add another function per HTML element to create the element, but
 return the parent's object rather than itself. To enable this, run:
 
-`$.createHtml("configure", {installParentFunctions: true});`
+```js
+$.createHtml("configure", {installParentFunctions: true});
+```
 
 This will install functions of the form `$<element-name>_()`.
 
 With these functions installed, you can do:
 
-`$('#myDiv').$table().$tr().$td_("cell 1").$td_("cell 2").$td_("cell 3");`
+```s
+$('#myDiv').$table().$tr().$td_("cell 1").$td_("cell 2").$td_("cell 3");
+```
 
 This will make all the `td` elements siblings. Note that you can achieve the
 same behaviour by putting `parent()` between each $td(), but that is just more typing
@@ -41,18 +47,24 @@ same behaviour by putting `parent()` between each $td(), but that is just more t
 Usage
 -----
 
-`$('selector').$<element-type>(["content",] [{<attr1>: <val1>, ...}]);`
+```js
+$('selector').$<element-type>(["content",] [{<attr1>: <val1>, ...}]);
+```
 
 Examples
 --------
 
 To create a table in the div#myDiv element:
 
-`$('#myDiv').$table();`
+```js
+$('#myDiv').$table();
+```
 
 To create a span with the text "hello world" and the class "bold":
 
-`$('#myDiv').$span("hello world", {"class": "bold"});`
+```js
+$('#myDiv').$span("hello world", {"class": "bold"});
+```
 
 To create a table and then add some rows:
 ```js
@@ -64,11 +76,14 @@ for (var i = 0; i < 10; i++) {
 ```
 You can skip the content if it isn't needed:
 
-`$('#myDiv').$span({"class": "bold"});`
+```js
+$('#myDiv').$span({"class": "bold"});
+```
 
 Be aware
 --------
-
-This plugin will add every HTML5 element name (preceded by a '$') into 
-the jQuery .fn namespace.  If you have a fear or great hatred of crowded
-namespaces (nominal claustrophobia?) then you should skip this plugin.
+>
+> This plugin will add every HTML5 element name (preceded by a '$') into 
+> the jQuery .fn namespace.  If you have a fear or great hatred of crowded
+> namespaces (nominal claustrophobia?) then you should skip this plugin.
+>

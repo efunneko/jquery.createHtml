@@ -1,4 +1,7 @@
 theme: jekyll-theme-architect
 title: Jquery Create HTML
 description: jQuery plugin to make it easier to create on-the-fly HTML elements and insert them into the DOM.
+github.repository_url: https://github.com/efunneko/jquery.createHtml
+github.owner_name: efunneko
+github.owner_url: https://github.com/efunneko
 show_downloads: true
