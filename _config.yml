@@ -1,1 +1,4 @@
 theme: jekyll-theme-architect
+title: Jquery Create HTML
+description: jQuery plugin to make it easier to create on-the-fly HTML elements and insert them into the DOM.
+show_downloads: true
